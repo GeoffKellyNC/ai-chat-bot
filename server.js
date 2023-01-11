@@ -21,6 +21,9 @@ app.get('/', (req, res) => {
 })
 
 
+app.use("/ai", require('./routes/aiRoutes'))
+
+
 
 const interfaces = os.networkInterfaces();
 const addresses = [];
