@@ -1,11 +1,22 @@
+import React from 'react'
 import './styles/App.css';
+import styled from 'styled-components'
+
+//Components
+import ChatMain from './views/ChatMain'
 
 function App() {
   return (
-    <div className="App">
-
-    </div>
+    <AppStyled>
+		<ChatMain />
+    </AppStyled>
   );
 }
 
 export default App;
+
+
+const AppStyled = styled.div`
+
+
+`
