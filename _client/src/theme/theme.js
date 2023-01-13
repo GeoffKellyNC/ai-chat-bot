@@ -5,13 +5,13 @@ export default {
     colors: {
 
         primary: '#0070f3', // blue //  rgba(0, 112, 243, 1)
-        secondary: '#32EBCA', // lightblue // rgba(0, 185, 255, 1)
+        secondary: '#98CE00', // green // rgba(152, 206, 0, 1)
         accent: '#3DEFD4', // dark blue // rgba(13, 52, 89, 1)
         berry: '#ff003e', // rgba(255, 0, 62, 0.5) // Red
         berryLight: 'rgba(255, 0, 62, 0.5)', // Red // #ff003e
         green : '#00ff05', // green // rgba(0, 255, 5, 1)
         white: '#ffffff', // white // rgba(255, 255, 255, 1)
-        chat_background: "#140309", 
+        chat_background: "#111010", 
         color_clear: 'rgba(6, 16, 26, 0.5)', // dark blue //
     },
     font: {
