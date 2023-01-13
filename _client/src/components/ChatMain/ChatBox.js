@@ -3,8 +3,7 @@ import styled from 'styled-components';
 import { connect } from 'react-redux';
 import * as aiActions from '../../store/ai/ai.actions';
 
-
-
+import Message from './Message'
 
 const ChatBox = ({
     chatLog,
@@ -17,14 +16,16 @@ const ChatBox = ({
     const onSubmit = async (e) => {
         console.log('Submitting!') //!REMOVE
         e.preventDefault();
-        await sendChat({id: 'user', message: input})
         setInput('')
+        await sendChat({id: 'user', message: input})
     }
 
   return (
     <ChatBoxContainer>
         <div className = 'chat-container'>
-
+            {
+                chatLog.map((message, idx) => <Message key = {idx} messageData = {message} />)
+            }
         </div>
         <div className = 'bottom-container'>
             <div className = 'input-container'>

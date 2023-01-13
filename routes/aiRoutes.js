@@ -6,7 +6,10 @@ const router = express.Router();
 
 router
     .route("/send-chat")
-    .post(aiController.setChat)
+    .post(aiControllers.sendChat)
+
+
+module.exports = router;
 
 
 
