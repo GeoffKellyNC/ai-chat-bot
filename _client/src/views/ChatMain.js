@@ -2,27 +2,23 @@ import React from 'react'
 import styled from 'styled-components'
 
 import aiLogo from '../assets/images/ai-logo-nobg.png'
-
-//components
+// components
 import ChatBox from '../components/ChatMain/ChatBox'
 import SideNav from '../components/ChatMain/SideNav'
 
-const ChatMain = () => {
-  return (
-    <ChatPage className = 'main-chat'>
-        <div className = 'background-image'>
-            <img src = {aiLogo} alt = 'ai-logo' />
-        </div>
+const ChatMain =
+    () => {
+      return (
+          <ChatPage className = 'main-chat'><div className = 'background-image'>
+          <img src = {aiLogo} alt = 'ai-logo' />
+          </div>
         <div className = 'main-chat-container'>
             <SideNav />
-            <ChatBox />
-        </div>
-    </ChatPage>
-  )
-}
+          <ChatBox /></div>
+    </ChatPage>)
+    }
 
 export default ChatMain
-
 
 const ChatPage = styled.div`
     height: 100vh;
