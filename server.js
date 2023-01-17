@@ -20,6 +20,10 @@ app.get('/', (req, res) => {
     res.send('<h1>Server is up and running</h1>')
 })
 
+app.get('/ping',(req,res) => {
+    res.send("pong")
+})
+
 
 app.use("/ai", require('./routes/aiRoutes'))
 

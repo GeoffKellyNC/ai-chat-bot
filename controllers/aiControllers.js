@@ -12,11 +12,10 @@ exports.sendChat = async (req, res) => {
 
         const aiResponse = await Ai.textDavinci003(userQuestion.data.message)
 
+
+        
+
         res.status(200).json(aiResponse)
-
-
-
-
 
     } catch (error) {
         res.status(500).json(error)
