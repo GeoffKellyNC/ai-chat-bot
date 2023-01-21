@@ -4,6 +4,8 @@ import styled from 'styled-components'
 import berryImg from '../../assets/images/berry-logo.png'
 import aiImg from '../../assets/images/ai-logo.png'
 
+import TextTypeWriter from './TextTypeWriter'
+
 const Message = ({
     messageData
 }) => {
@@ -14,7 +16,11 @@ const Message = ({
             alt = 'message-avatar'
             className = 'message-avatar'
         />
-        <span className = 'message-text'> {messageData.message} </span>
+        <span className = {`message-text ${messageData.id === 'user' ? 'user-message' : 'ai-message'}`}> 
+        {
+            messageData.id === 'user' ? messageData.message : <TextTypeWriter text = {messageData.message} />
+        }
+        </span>
         
     </MessageText>
   )
@@ -27,6 +33,7 @@ const MessageText = styled.div`
     display: flex;
     align-items: center;
     margin: 10px 0;
+    font-family: ${pr => pr.theme.font.family.secondary};
 
 
     .message-avatar {
@@ -39,6 +46,18 @@ const MessageText = styled.div`
         margin-left: 10px;
         font-size: 1.2rem;
         color: white;
+    }
+
+    .user-message {
+        background: #ff2e53a8;
+        padding: 10px 15px;
+        border-radius: 10px;
+    }
+
+    .ai-message {
+        background: #01a1ffba;
+        padding: 10px 15px;
+        border-radius: 10px;
     }
 
 `

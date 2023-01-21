@@ -34,6 +34,7 @@ const ChatBox = ({
                     placeholder = 'Type your message here...'
                     value = {input}
                     onChange = {(e) => setInput(e.target.value)}
+                    className = 'text-area'
                 />
                 <button onClick = {onSubmit}> Send </button>
             </div>
@@ -60,7 +61,7 @@ const ChatBoxContainer = styled.div`
     backdrop-filter: blur( 4.5px );
     -webkit-backdrop-filter: blur( 4.5px );
     border-radius: 10px;
-    border: 1px solid rgba( 255, 255, 255, 0.18 );
+    ${'' /* border: 1px solid rgba( 255, 255, 255, 0.18 ); */}
 
     .bottom-container{
         position: absolute;
@@ -72,8 +73,32 @@ const ChatBoxContainer = styled.div`
         height: 7%;
     }
 
+    .input-container {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
     textarea {
-        width: 100%;
+        width: 80%;
+        margin: 0 10px;
+        min-height: 10px;
+        max-height: 300px;
+        padding: 10px;
+        font-size: 16px;
+        resize: none;
+        overflow: hidden;
+        border: none;
+        outline: none;
+        border-radius: 5px;
+        background: rgba( 255, 255, 255, 0.18 );
+        box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+        backdrop-filter: blur( 4.5px );
+        font-family: ${pr => pr.theme.font.family.secondary};
+        font-weight: 400;
+        color: ${pr => pr.theme.font.colors.secondary};
+        overflow: auto;
     }
   
 `;

@@ -1,9 +1,16 @@
 import * as aiTypes from './ai.types'
 
 
+const exampleChat = [
+    {
+        id: 'user', 
+        message: "Hello, this is a sample of user text to the bot!"}, 
+    {   id: 'berry', 
+        message: "This is an example of a response from the open AI bot."
+    }]
 
 
-export function chatLog (state = [], action){
+export function chatLog (state = exampleChat, action){
     switch(action.type){
         case aiTypes.UPDATE_CHAT_LOG:
             return [...state, action.payload]
