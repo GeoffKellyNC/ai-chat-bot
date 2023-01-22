@@ -28,7 +28,7 @@ class Ai {
             model: "text-davinci-003",
             prompt: `${context.length > 1 ? question : context}`,
             temperature: 0.5,
-            max_tokens: 150,
+            max_tokens: 550,
             frequency_penalty: 0.5,
             presence_penalty: 0.0, 
             });

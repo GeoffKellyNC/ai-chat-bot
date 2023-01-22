@@ -9,8 +9,12 @@ const exampleChat = [
         message: "This is an example of a response from the open AI bot."
     }]
 
+const defaultChat = [
+    {id: 'berry', message: "Hi, I'm Berry! Ask me anything."}
+]
 
-export function chatLog (state = exampleChat, action){
+
+export function chatLog (state = defaultChat, action){
     switch(action.type){
         case aiTypes.UPDATE_CHAT_LOG:
             return [...state, action.payload]
