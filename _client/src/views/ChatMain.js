@@ -28,6 +28,7 @@ const ChatPage = styled.div`
     height: 100vh;
     background: ${pr => pr.theme.colors.chat_background};
     min-width: 100%;
+    overflow: hidden;
 
 
     .main-chat-container {
