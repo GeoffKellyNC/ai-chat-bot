@@ -32,3 +32,12 @@ export function aiContext (state = [], action){
     }
 }
 
+export function selectedModel (state = '', action){
+    switch(action.type){
+        case aiTypes.SET_MODEL:
+            return action.payload
+        default:
+            return state
+    }
+}
+

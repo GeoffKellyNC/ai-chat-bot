@@ -33,3 +33,14 @@ export const sendChat = (data) => async dispatch => {
         
     }
 }
+
+
+export const chooseModel = (model) => async dispatch => {
+
+    dispatch({
+        types: aiTypes.SET_MODEL,
+        payload: model
+    })
+
+    return
+}
