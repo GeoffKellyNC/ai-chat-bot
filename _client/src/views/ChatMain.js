@@ -1,15 +1,29 @@
 import React from 'react'
 import styled from 'styled-components'
+import { connect } from 'react-redux'
+import * as aiActions from '../store/ai/ai.actions'
 
 import aiLogo from '../assets/images/ai-logo-nobg.png'
 
 //components
+import AppNotification from '../components/AppNotification.jsx'
+import AppErrorNotification from '../components/AppErrorNotification.jsx'
 import ChatBox from '../components/ChatMain/ChatBox'
 import SideNav from '../components/ChatMain/SideNav'
 
-const ChatMain = () => {
+const ChatMain = ({
+    selectedModel,
+    appErrorNotification,
+    appNotification
+}) => {
   return (
     <ChatPage className = 'main-chat'>
+                {
+            appErrorNotification.active && <AppErrorNotification appErrorNotification = { appErrorNotification } />
+        }
+        {
+            appNotification.active && <AppNotification appNotification = { appNotification } />
+        }
         <div className = 'background-image'>
             <img src = {aiLogo} alt = 'ai-logo' />
         </div>
@@ -21,7 +35,11 @@ const ChatMain = () => {
   )
 }
 
-export default ChatMain
+export default connect(st => ({
+    selectedModel: st.selectedModel,
+    appErrorNotification: st.appErrorNotification,
+    appNotification: st.appNotification
+}),null) (ChatMain)
 
 
 const ChatPage = styled.div`

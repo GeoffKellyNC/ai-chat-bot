@@ -40,6 +40,7 @@ class Ai {
             console.log("🚀 ~ file: Ai.js:16 ~ Ai ~ textDavinci003 ~ error", error)
         }
     }
+
 }
 
 module.exports = Ai
