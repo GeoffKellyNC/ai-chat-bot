@@ -1,3 +1,3 @@
 export const UPDATE_CHAT_LOG = 'UPDATE_USER_CHAT_LOG';
 export const UPDATE_AI_CONTEXT = 'UPDATE_AI_CONTEXT';
-export const SET_MODEL = 'SET_MODEL';
+export const SET_MODEL = 'SET_MODEL'; 
